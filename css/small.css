@@ -1,0 +1,70 @@
+/* small */
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    font-size: 1.7rem;
+  }
+  header .margin {
+    width: 90%;
+  }
+  #header-menu-toggle {
+    display: block;
+  }
+  #header-menu-toggle:hover {
+    opacity: 0.5;
+  }
+  nav {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    display: none;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+  nav ul li {
+    height: 40px;
+    line-height: 40px;
+  }
+  nav ul li h2:hover {
+    font-weight: bold;
+  }
+
+  #kickgoing {
+    background-position: right bottom;
+    background-size: 160%;
+  }
+  #kickgoing .align {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+  }
+  #kickgoing .align #main_text {
+    font-size: 2.2rem;
+  }
+  #kickgoing .align #main_logo {
+    width: 30%;
+    height: 5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+  }
+  #kickgoing .align .main_app {
+    display: none;
+  }
+
+  #kickgoing .align .responsive_app {
+    display: block;
+  }
+}

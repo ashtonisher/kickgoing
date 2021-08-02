@@ -1,0 +1,26 @@
+/* large */
+@media only screen and (max-width: 1366px) {
+  header .margin {
+    width: 90%;
+  }
+
+  #kickgoing .align {
+    width: 90%;
+  }
+
+  #intro {
+    width: 90%;
+  }
+
+  #intro ul li {
+    width: 30rem;
+  }
+
+  #service #service_bg .service_text {
+    left: 80%;
+  }
+
+  #service-area #area-list .area {
+    width: 90%;
+  }
+}

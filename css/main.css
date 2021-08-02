@@ -1,0 +1,470 @@
+html,
+body {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+  font-size: 16px;
+  background-color: #f7f8fa;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #20232b;
+  font-weight: bold;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+/* layout */
+#wrapper,
+header,
+main,
+section,
+footer {
+  width: 100%;
+}
+
+.margin {
+  margin: 0 auto;
+}
+
+.mint {
+  width: 140px;
+  height: 22px;
+  background-image: url('../img/Img_Marking_Dark.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 10px;
+  left: -5px;
+}
+/* header */
+header {
+  width: 100%;
+  height: 50px;
+  /* background-color: #00c2ab; */
+  padding: 10px 0;
+  background-color: white;
+  position: fixed;
+  z-index: 50;
+}
+header .margin {
+  width: 1200px;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+/* logo */
+#logo {
+  width: 144px;
+  height: 24px;
+}
+#logo a h1 {
+}
+#logo a h1 img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* header-list */
+#header-menu-toggle {
+  position: relative;
+  top: 17px;
+  height: 16px;
+  cursor: pointer;
+  display: none;
+}
+#header-menu-toggle div,
+#header-menu-toggle div::before,
+#header-menu-toggle div::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #00c2ab;
+  position: relative;
+}
+
+#header-list #header-menu-toggle div {
+}
+#header-menu-toggle div::before {
+  top: 14px;
+}
+#header-menu-toggle div::after {
+  top: 5px;
+}
+
+/* nav */
+nav {
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li h2 {
+  font-weight: normal;
+}
+/* main_ad */
+#kickgoing {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  background-color: #00c2ab;
+  background-image: url('../img/Img_Home.png');
+  /* background-size: contain; */
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+#kickgoing .align {
+  width: 1200px;
+  font-weight: bold;
+  position: relative;
+  top: 280px;
+}
+#kickgoing .align #main_text {
+  font-size: 48px;
+}
+#kickgoing .align #main_logo {
+  width: 310px;
+  height: 108px;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden;
+  background-image: url('../img/Logo_Kor_white.png');
+  background-size: 100%;
+  margin-top: 40px;
+}
+#kickgoing .align .main_app {
+  height: 60px;
+  margin-top: 70px;
+  padding: 0px 30px;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin-right: 25px;
+  line-height: 68px;
+  display: inline-flex;
+}
+#kickgoing .align .main_app .img_wrapper {
+  width: 16px;
+  height: 16px;
+}
+#kickgoing .align .main_app .img_wrapper img {
+  width: 100%;
+}
+#kickgoing .align .main_app .app_text {
+  line-height: 60px;
+  margin-left: 12px;
+}
+#kickgoing .align .responsive_app {
+  width: 20%;
+  height: 40px;
+  margin: 0 auto;
+  display: none;
+}
+#kickgoing .align .responsive_app .app_text {
+  margin: 0;
+  line-height: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+/* */
+#intro {
+  width: 1200px;
+  text-align: center;
+  margin-top: 220px;
+}
+#intro h3 {
+  font-size: 48px;
+  line-height: 70px;
+}
+#intro > p {
+  margin-top: 50px;
+  font-size: 24px;
+}
+#intro ul {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+#intro ul li {
+  width: 400px;
+  height: 406px;
+}
+#intro ul li img {
+  width: 280px;
+}
+#intro ul li h4 {
+  font-size: 28px;
+}
+#intro ul li p {
+  margin-top: 28px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* service */
+#service {
+  width: 100%;
+  height: 800px;
+  margin-top: 220px;
+}
+#service #service_bg {
+  height: 100%;
+  background-image: url('../img/Img_Coffee.jpg');
+  position: relative;
+}
+#service #service_bg .service_text {
+  width: 500px;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 1100px;
+  transform: translate(-70%, -50%);
+}
+#service #service_bg .service_text h3 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+#service #service_bg .service_text p {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+/* manual */
+#manual {
+  width: 90vw;
+  height: 600px;
+  padding: 240px 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#manual img {
+  width: 300px;
+}
+#manual #text-area h3 {
+  font-size: 48px;
+  margin-top: 150px;
+}
+#manual #text-area ul {
+  width: 500px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+#manual #text-area ul li {
+}
+#manual #text-area ul li a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #20232b;
+}
+#manual #text-area ul li a span {
+}
+#manual #text-area p {
+  width: 500px;
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+/* checklist */
+#checklist {
+  width: 100%;
+  background-color: #f2f4f7;
+  text-align: center;
+  padding-top: 220px;
+}
+#checklist h3 {
+  width: 420px;
+  font-size: 48px;
+  line-height: 72px;
+}
+#checklist div {
+  width: 352px;
+  padding: 38px 64px 174px 64px;
+  margin-top: 60px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 3px 3px 0 lightgray;
+}
+#checklist div ul li {
+  width: 352px;
+  height: 36px;
+  padding: 33px 0 15px 0;
+  color: #20232b;
+  font-size: 32px;
+  border-bottom: 2px solid #f2f4f7;
+  background-image: url('../img/Icon_Check.png');
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  background-position: left 20px;
+}
+
+/* service-area */
+#service-area {
+  width: 100%;
+  height: 820px;
+  padding: 220px 0;
+  background-image: url('../img/Img_Area.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+}
+#service-area .margin {
+  width: 1200px;
+}
+#service-area h3 {
+  font-size: 48px;
+  line-height: 72px;
+  color: white;
+}
+#service-area #area-list {
+  margin-left: 50%;
+  font-size: 26px;
+  position: relative;
+}
+#service-area #area-list h4 {
+  width: 140px;
+  height: 26px;
+  margin-top: 80px;
+  display: block;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+#service-area #area-list .area {
+  width: 630px;
+}
+#service-area #area-list .area h5 {
+  margin-top: 50px;
+  color: white;
+}
+#service-area #area-list .area p {
+  margin-top: 10px;
+  line-height: 40px;
+  word-break: keep-all;
+}
+#service-area #area-list a {
+  position: relative;
+}
+#service-area #area-list a button {
+  width: 210px;
+  height: 64px;
+  margin-top: 50px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+#service-area #area-list a button::after {
+  width: 24px;
+  height: 24px;
+  content: '';
+  display: block;
+  background-image: url('../img/Icon_Arrow_Right.png');
+  background-size: 100%;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: #20232b;
+  color: white;
+}
+
+footer .margin {
+  width: 1200px;
+  display: flex;
+}
+
+/* info */
+footer .margin #info {
+  padding-top: 80px;
+}
+footer .margin #info ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .margin #info ul .footer-title {
+  width: 210px;
+  font-weight: bold;
+}
+footer .margin #info ul .footer-title ul {
+  display: block;
+}
+footer .margin #info ul .footer-title ul li:first-child {
+  margin-top: 25px;
+}
+footer .margin #info ul .footer-title ul li {
+  margin-bottom: 15px;
+  font-weight: normal;
+  word-break: keep-all;
+  line-height: 20px;
+}
+footer .margin #info ul .footer-title ul li a {
+  font-weight: normal;
+}
+
+/* sns */
+footer .margin #sns {
+  padding-top: 80px;
+  margin-left: auto;
+}
+footer .margin #sns ul {
+  width: 202px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .margin #sns ul li a {
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+}
+footer .margin #sns ul li:nth-child(1) a {
+  background-image: url('../img/Img_Instagram.png');
+}
+footer .margin #sns ul li:nth-child(2) a {
+  width: 36px;
+  background-image: url('../img/Img_Youtube.png');
+}
+footer .margin #sns ul li:nth-child(3) a {
+  background-image: url('../img/Img_Facebook.png');
+}
+footer .margin #sns ul li:nth-child(4) a {
+  background-image: url('../img/Img_Blog.png');
+}
