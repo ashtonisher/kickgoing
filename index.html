@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/small.css" />
   </head>
   <body>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script defer src="js/main.js"></script>
     <div id="wrapper">
       <!-- header -->
       <header>
@@ -125,15 +128,62 @@
         </section>
         <!-- service-ex -->
         <section id="service">
-          <div id="service_bg">
-            <div class="service_text">
-              <h3>아침, 버스 대신 킥고잉을 탑니다</h3>
-              <p>
-                5분 빨라진 것만으로도 하루를 시작하며<br />커피 한 잔 마실
-                여유가 생겼어요
-              </p>
+          <!-- 이미지를 감싸는 wrapper
+          slide 이동에 사용 -->
+          <div id="service_wrapper">
+            <div class="service_bg">
+              <div class="service_text">
+                <h3>주말, 약속 장소까지 킥고잉을 탑니다</h3>
+                <p>
+                  평소에는 찾아가기 불편했던 곳에서도<br />
+                  마음껏 친구를 만날 수 있어요
+                </p>
+              </div>
+            </div>
+            <div class="service_bg">
+              <div class="service_text">
+                <h3>아침, 버스 대신 킥고잉을 탑니다</h3>
+                <p>
+                  5분 빨라진 것만으로도 하루를 시작하며<br />
+                  커피 한 잔 마실 여유가 생겼어요
+                </p>
+              </div>
+            </div>
+            <div class="service_bg">
+              <div class="service_text">
+                <h3>저녁, 지하철에서 내려 킥고잉을 탑니다</h3>
+                <p>
+                  집에 일찍 들어간 덕분에 치킨과 함께<br />
+                  좋아하는 드라마를 볼 여유가 생겼어요
+                </p>
+              </div>
+            </div>
+            <div class="service_bg">
+              <div class="service_text">
+                <h3>주말, 약속 장소까지 킥고잉을 탑니다</h3>
+                <p>
+                  평소에는 찾아가기 불편했던 곳에서도<br />
+                  마음껏 친구를 만날 수 있어요
+                </p>
+              </div>
+            </div>
+            <div class="service_bg">
+              <div class="service_text">
+                <h3>아침, 버스 대신 킥고잉을 탑니다</h3>
+                <p>
+                  5분 빨라진 것만으로도 하루를 시작하며<br />
+                  커피 한 잔 마실 여유가 생겼어요
+                </p>
+              </div>
             </div>
           </div>
+          <div id="service_btn_wrapper">
+            <button class="service_btn btn_selected"></button>
+            <button class="service_btn"></button>
+            <button class="service_btn"></button>
+          </div>
+          <button class="service_arrow left_arrow"></button>
+          <button class="service_arrow right_arrow"></button>
         </section>
         <!-- manual -->
         <section id="manual" class="margin">

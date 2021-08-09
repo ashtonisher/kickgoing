@@ -129,7 +129,7 @@ nav ul li h2 {
   height: 100vh;
   background-color: #00c2ab;
   background-image: url('../img/Img_Home.png');
-  /* background-size: contain; */
+  background-size: contain;
   background-position: left bottom;
   background-repeat: no-repeat;
   color: white;
@@ -187,7 +187,7 @@ nav ul li h2 {
   font-size: 1.6rem;
   font-weight: bold;
 }
-/* */
+/* intro */
 #intro {
   width: 1200px;
   text-align: center;
@@ -227,32 +227,96 @@ nav ul li h2 {
   width: 100%;
   height: 800px;
   margin-top: 220px;
+  overflow: hidden;
+  position: relative;
 }
-#service #service_bg {
+#service #service_wrapper {
+  width: 400%;
+  height: 100%;
+  position: relative;
+  right: 100vw;
+  display: flex;
+}
+#service .service_bg {
+  min-width: 100vw;
+  width: 100vw;
+  /* flex-basis: 100vw; */
+  /* flex-wrap: nowrap; */
   height: 100%;
   background-image: url('../img/Img_Coffee.jpg');
   position: relative;
 }
-#service #service_bg .service_text {
-  width: 500px;
+#service .service_bg:nth-child(1) {
+  background-image: url('../img/Img_Weekend.jpg');
+}
+#service .service_bg:nth-child(2) {
+  background-image: url('../img/Img_Coffee.jpg');
+}
+#service .service_bg:nth-child(3) {
+  background-image: url('../img/Img_Chicken.jpg');
+}
+#service .service_bg:nth-child(4) {
+  background-image: url('../img/Img_Weekend.jpg');
+}
+#service .service_bg:nth-child(5) {
+  background-image: url('../img/Img_Coffee.jpg');
+}
+#service .service_bg .service_text {
+  width: 80%;
+  color: white;
   text-align: right;
   position: absolute;
   top: 50%;
-  left: 1100px;
-  transform: translate(-70%, -50%);
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
-#service #service_bg .service_text h3 {
+#service .service_bg .service_text h3 {
   color: white;
   font-size: 32px;
   margin-bottom: 50px;
 }
-#service #service_bg .service_text p {
+#service .service_bg .service_text p {
   color: white;
   font-size: 24px;
   font-weight: 300;
   line-height: 36px;
 }
-
+#service #service_btn_wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#service #service_btn_wrapper .service_btn {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#service #service_btn_wrapper .btn_selected {
+  background-color: #00c2ab;
+}
+#service .service_arrow {
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#service .service_arrow:hover {
+  opacity: 50%;
+}
+#service .left_arrow {
+  background: url('../img/Img_Arrow_Left.png') no-repeat center center/50%;
+  left: 0;
+}
+#service .right_arrow {
+  background: url('../img/Img_Arrow_Right.png') no-repeat center center/50%;
+  right: 0;
+}
 /* manual */
 #manual {
   width: 90vw;
