@@ -1,8 +1,7 @@
 html,
 body {
-  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
-  font-size: 16px;
-  background-color: #f7f8fa;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-size: 10px;
 }
 h1,
 h2,
@@ -18,7 +17,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .clearfix::after {
@@ -57,9 +56,9 @@ header {
   height: 50px;
   /* background-color: #00c2ab; */
   padding: 10px 0;
-  background-color: white;
   position: fixed;
   z-index: 50;
+  transition: 0.08s;
 }
 header .margin {
   width: 1200px;
@@ -121,6 +120,10 @@ nav ul li {
 }
 nav ul li h2 {
   font-weight: normal;
+  color: white;
+}
+nav ul li h2:hover {
+  font-weight: bold;
 }
 /* main_ad */
 #kickgoing {
@@ -130,7 +133,7 @@ nav ul li h2 {
   background-color: #00c2ab;
   background-image: url('../img/Img_Home.png');
   background-size: contain;
-  background-position: left bottom;
+  background-position: bottom center;
   background-repeat: no-repeat;
   color: white;
 }
@@ -139,10 +142,12 @@ nav ul li h2 {
   width: 1200px;
   font-weight: bold;
   position: relative;
-  top: 280px;
+  top: 320px;
 }
 #kickgoing .align #main_text {
   font-size: 48px;
+  letter-spacing: 0.036rem;
+  text-shadow: 0 0 0.1rem rgb(0 0 0 / 30%), 0 0 4rem rgb(0 0 0 / 20%);
 }
 #kickgoing .align #main_logo {
   width: 310px;
@@ -152,21 +157,22 @@ nav ul li h2 {
   overflow: hidden;
   background-image: url('../img/Logo_Kor_white.png');
   background-size: 100%;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 #kickgoing .align .main_app {
   height: 60px;
-  margin-top: 70px;
-  padding: 0px 30px;
+  margin-top: 45px;
+  padding: 0px 25px;
   border: 2px solid white;
   border-radius: 8px;
-  margin-right: 25px;
+  margin-right: 22px;
   line-height: 68px;
   display: inline-flex;
 }
 #kickgoing .align .main_app .img_wrapper {
   width: 16px;
   height: 16px;
+  margin-top: 2px;
 }
 #kickgoing .align .main_app .img_wrapper img {
   width: 100%;
@@ -174,6 +180,8 @@ nav ul li h2 {
 #kickgoing .align .main_app .app_text {
   line-height: 60px;
   margin-left: 12px;
+  font-size: 20px;
+  letter-spacing: -0.04rem;
 }
 #kickgoing .align .responsive_app {
   width: 20%;
@@ -187,6 +195,21 @@ nav ul li h2 {
   font-size: 1.6rem;
   font-weight: bold;
 }
+#kickgoing .arrow-down {
+  display: block;
+  background-image: url(../img/Img_Arrow_Down.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5rem;
+  z-index: 10;
+}
+
 /* intro */
 #intro {
   width: 1200px;
@@ -321,12 +344,22 @@ nav ul li h2 {
 #manual {
   width: 90vw;
   height: 600px;
-  padding: 240px 40px;
+  padding: 24rem 4rem;
+  background-color: #f7f8fa;
+}
+#manual .margin {
+  max-width: 1020px;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+}
+#manual .manual__img {
+  position: relative;
+  width: 300px;
+  margin-right: 20rem;
 }
 #manual img {
   width: 300px;
+  position: absolute;
 }
 #manual #text-area h3 {
   font-size: 48px;
@@ -337,8 +370,46 @@ nav ul li h2 {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 #manual #text-area ul li {
+  height: 30px;
+  position: relative;
+  z-index: 0;
+}
+#manual #text-area ul li::before,
+#manual #text-area ul li::after {
+  height: 9px;
+  padding: 8px;
+  content: '';
+  display: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+#manual #text-area ul .manual--selected {
+  background: url('../img/Img_Marking_Light.png') no-repeat;
+  background-position: left -30%;
+  background-size: cover;
+}
+#manual #text-area ul li:nth-child(1) {
+  background-position: left -15%;
+}
+#manual #text-area ul .manual--selected::before {
+  display: block;
+  padding-top: 10px;
+  left: -5px;
+  top: 3px;
+  background-image: url('../img/Img_Marking_Light.png');
+  background-position: left bottom;
+}
+#manual #text-area ul .manual--selected::after {
+  display: block;
+  top: 3px;
+  right: 0;
+  background-image: url('../img/Img_Marking_Light.png');
+  background-position: right top;
 }
 #manual #text-area ul li a {
   font-size: 24px;
@@ -348,10 +419,15 @@ nav ul li h2 {
 #manual #text-area ul li a span {
 }
 #manual #text-area p {
-  width: 500px;
+  width: 520px;
   margin-top: 20px;
   font-size: 24px;
   line-height: 40px;
+  word-break: keep-all;
+  display: none;
+}
+#manual #text-area .manual__p--selected {
+  display: block;
 }
 
 /* checklist */
@@ -447,6 +523,7 @@ nav ul li h2 {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 8px;
+  cursor: pointer;
 }
 #service-area #area-list a button::after {
   width: 24px;
@@ -457,15 +534,20 @@ nav ul li h2 {
   background-size: 100%;
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 9px;
+  transition: 0.1s;
+}
+#service-area #area-list a button:hover::after {
+  right: 13px;
 }
 
 /* footer */
 footer {
   width: 100%;
-  height: 320px;
+  height: 400px;
   background-color: #20232b;
   color: white;
+  font-size: 16px;
 }
 
 footer .margin {
@@ -474,44 +556,45 @@ footer .margin {
 }
 
 /* info */
-footer .margin #info {
+footer #info {
   padding-top: 80px;
 }
-footer .margin #info ul {
+footer #info ul {
   display: flex;
   justify-content: space-between;
 }
-footer .margin #info ul .footer-title {
+footer #info ul .footer-title {
   width: 210px;
   font-weight: bold;
 }
-footer .margin #info ul .footer-title ul {
+footer #info ul .footer-title ul {
   display: block;
 }
-footer .margin #info ul .footer-title ul li:first-child {
+footer #info ul .footer-title ul li:first-child {
   margin-top: 25px;
 }
-footer .margin #info ul .footer-title ul li {
+footer #info ul .footer-title ul li {
   margin-bottom: 15px;
   font-weight: normal;
   word-break: keep-all;
   line-height: 20px;
+  font-size: 15px;
 }
-footer .margin #info ul .footer-title ul li a {
+footer #info ul .footer-title ul li a {
   font-weight: normal;
 }
 
 /* sns */
-footer .margin #sns {
+footer #sns {
   padding-top: 80px;
   margin-left: auto;
 }
-footer .margin #sns ul {
+footer #sns ul {
   width: 202px;
   display: flex;
   justify-content: space-between;
 }
-footer .margin #sns ul li a {
+footer #sns ul li a {
   width: 32px;
   height: 32px;
   background-size: 100%;
@@ -519,16 +602,38 @@ footer .margin #sns ul li a {
   background-repeat: no-repeat;
   display: block;
 }
-footer .margin #sns ul li:nth-child(1) a {
+footer #sns ul li:nth-child(1) a {
   background-image: url('../img/Img_Instagram.png');
 }
-footer .margin #sns ul li:nth-child(2) a {
+footer #sns ul li:nth-child(2) a {
   width: 36px;
   background-image: url('../img/Img_Youtube.png');
 }
-footer .margin #sns ul li:nth-child(3) a {
+footer #sns ul li:nth-child(3) a {
   background-image: url('../img/Img_Facebook.png');
 }
-footer .margin #sns ul li:nth-child(4) a {
+footer #sns ul li:nth-child(4) a {
   background-image: url('../img/Img_Blog.png');
+}
+
+footer .align {
+  width: 1200px;
+  margin: 60px auto;
+  font-size: 14px;
+}
+footer #policy {
+  margin-bottom: 20px;
+}
+footer #policy a {
+  margin-right: 20px;
+}
+
+footer #company {
+  color: #bbbec7;
+  letter-spacing: 0.011rem;
+}
+footer #company #copyright {
+  width: 120px;
+  float: right;
+  font-weight: bold;
 }

@@ -67,4 +67,12 @@
   #kickgoing .align .responsive_app {
     display: block;
   }
+
+  /* intro */
+  #intro ul {
+    display: block;
+  }
+  #intro ul li {
+    margin: 0 auto;
+  }
 }
